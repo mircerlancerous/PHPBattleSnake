@@ -1,0 +1,8 @@
+.snakeboard{
+	border-collapse: collapse;
+}
+.snakeboard td{
+	border: 1px solid #a0a0a0;
+	width: 30px;
+	height: 30px;
+}

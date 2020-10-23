@@ -1,0 +1,278 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+html{
+	height: 100%;
+	width: 100%;
+}
+
+body {
+    height:100%;
+    width:100%;
+    max-height: 100%;
+    overflow: auto;
+    font-family: calibri, arial;
+    font-size: 16px;
+}
+
+a{
+	outline:none;
+	color: blue;
+}
+
+a:hover{
+	color: green;
+}
+
+#popuphldr{
+    top: 150px;
+    
+    position: fixed;
+    z-index: 102;
+    text-align: center;
+    width: 100%;
+    max-height: 50%;
+    overflow: auto;
+}
+
+#popuphldr .popmessage, #popuphldr .poperror{
+	padding: 12px 24px;
+    font-size: 16px;
+	min-height: 58px;
+	
+    background-color: #fff;
+    display: inline-block;
+	text-transform: uppercase;
+	color: black;
+	position: relative;
+	box-sizing: border-box;
+}
+
+#popuphldr .popmessage div, #popuphldr .poperror div{
+	margin-bottom: 15px;
+}
+
+#popupshade {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 101;
+}
+
+#popuphldr .popBtn{
+	width:20%;
+	min-width:50px;
+	font-size:14px;
+	padding: 5px 0;
+	
+	display: inline-block;
+	font-weight: 900;
+	text-decoration: none;
+	border: 1px solid;
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+#popuphldr .noBtn{
+	background-color: #eee;
+}
+
+#messageBox{
+	position: fixed;
+	top: 20px;
+	left: 50%;
+	opacity: 1;
+	width: 1px;
+	overflow: visible;
+	z-index: 100;
+}
+
+#messageBox .close{
+	position: absolute;
+	top: -10px;
+	right: -195px;
+	cursor: pointer;
+	background-image: url('../images/close.png');
+	background-size: contain;
+	min-width: 30px;
+	min-height: 30px;
+	z-index: 101;
+}
+
+.message, .error{
+	padding: 15px;
+	margin: 5px 0;
+	border-radius: 7px;
+	box-shadow: 0px 0px 10px black;
+	width: 300px;
+	position: relative;
+	left: -150px;
+	text-align: center;
+	background-color: white;
+}
+
+.message{
+	color: blue;
+}
+
+.error{
+	color: red;
+}
+
+.error img{
+	height: 20px;
+	float: left;
+}
+
+.slowHide{
+	opacity: 0 !important;
+	transition: opacity 8s;
+}
+
+.structure{
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+}
+
+.mainMenu{
+	width: 50px;
+	background-color: #4088ff;
+	vertical-align: top;
+	text-align: center;
+}
+
+.mainMenu img{
+	width: 40px;
+	margin-top: 8px;
+	margin-bottom: 5px;
+}
+
+.mainBody .mainMenu{
+	display: none;
+}
+
+.miniMenu{
+	display: none;
+}
+
+.mainBody{
+	vertical-align: top;
+	padding-left: 10px;
+	overflow-y: auto;
+}
+
+@media print{
+	.mainBody{
+		padding: 0px;
+	}
+	.mainMenu, .miniMenu, .noprint{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.mainMenu{
+		display: none;
+	}
+	
+	.miniMenu{
+		display: block;
+		float: left;
+		background-color: #4088ff;
+		cursor: pointer;
+		min-width: 50px;
+		min-height: 50px;
+		margin-right: 15px;
+	}
+	
+	.miniMenu .menuBtn{
+		padding: 5px 5px 0;
+		background-color: #4088ff;
+		cursor: pointer;
+		position: relative;
+		z-index: 10;
+	}
+
+	.miniMenu .mainMenu{
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		transition: bottom 1s;
+		z-index: 9;
+	}
+	
+	.mainBody{
+		padding-left: 0px;
+	}
+}
+
+.abtn{
+	text-decoration: none;
+	display: inline-block;
+	border: 1px solid #848484;
+	font-size: 13px;
+	padding: 3px;
+	margin-right: 5px;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	border-radius: 3px;
+	min-width: 80px;
+	text-align: center;
+	color: blue;
+	background-color: #f7f7f7;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.help{
+	height: 20px;
+	float: right;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.item{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+}
+
+.pageTitle{
+	font-weight: bold;
+	font-size: 24px;
+	height: 55px;
+}
+
+.pageTitle div{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.pageTitle p{
+	font-size: 15px;
+}
+
+.optionsHolder .close{
+	cursor: pointer;
+	height: 20px;
+	float: left;
+}
+
+.optionsHolder .optionBox{
+	display: inline-block;
+	text-align: left;
+}
+
+.optionBox .detail{
+	font-size: 13px;
+}
+
+.subtitle{
+	font-size: 15px;
+}
